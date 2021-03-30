@@ -49,21 +49,24 @@ while reponse =="o":
                   color_b="r"
 
 #--------------------Gains ---------------------------------------#
+        print("\n\nLa roulette tourne...........")
+        print("\n...........et s'arrete sur le numéro "+str(bille))
+       
         gain=0
 
         if case =="bille":
                 gain=ceil(3*somme)
                 cagnotte= cagnotte+gain
+                print("\nFélicitation !!! Vous obtenez " + str(gain) + " euros")
         else:
              if color_b =="color":
                        gain=ceil(0.5*somme)
                        cagnotte= cagnotte+gain
+                       print("\nFélicitation !!! Vous obtenez " + str(gain) + " euros")
              else:
                        cagnotte=cagnotte-somme
-#-----------------affichage final ------------------------------#                           
-        print("\n\nLa roulette tourne...........")
-        print("\n...........et s'arrete sur le numéro "+str(bille))
-        print("\nFélicitation ! Vous obtenez " + str(gain))
+                       print("\nDésolé vous avez perdu !")
+
         print("\nVotre cagnotte est dédormais de : " +str(cagnotte)+" euros\n")
     
         reponse = str(input("\nVoulez vous continuez ? o/n : "))
